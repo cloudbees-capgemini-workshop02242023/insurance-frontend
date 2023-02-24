@@ -24,7 +24,7 @@ pipeline {
           }
           steps {
             sh 'chmod +x test.sh'
-            sh './test.sh $SERVICE_CREDS_USR $SERVICE_CREDS_PSW'
+            sh "./test.sh $SERVICE_CREDS_USR $SERVICE_CREDS_PSW"
           }
         }
       }
