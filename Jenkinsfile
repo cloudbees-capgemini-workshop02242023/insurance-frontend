@@ -23,7 +23,8 @@ pipeline {
             SERVICE_CREDS = credentials('example-service-username-password')
           }
           steps {
-            sh "echo TODO - test $FAVORITE_COLOR with SERVICE_CREDS: username=$SERVICE_CREDS_USR password=$SERVICE_CREDS_PSW"
+            sh 'chmod +x test.sh'
+            sh 'test.sh $SERVICE_CREDS_USR $SERVICE_CREDS_PSW'
           }
         }
       }
